@@ -155,3 +155,9 @@ background-color: #000;
 .team img{
   border-radius: 20px;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
