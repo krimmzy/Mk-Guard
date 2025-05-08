@@ -1,109 +1,125 @@
 /* General Reset & Typography */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+* {
+  box-sizing: border-box;
+}
 
-  }
-  
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
 .navbar-brand {
-    font-size: 1.6rem;
-    letter-spacing: 1px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Container fix */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 /* Hero Section */
 .hero-section {
-    background: url('https://images.unsplash.com/photo-1617727553255-cf1f1f57f5e6?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-    position: relative;
+  background: url('https://images.unsplash.com/photo-1617727553255-cf1f1f57f5e6?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  position: relative;
 }
 
 .hero-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-section .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-section h1, .hero-section p {
-    color: #fff;
+.hero-section h1,
+.hero-section p {
+  color: #fff;
 }
 
 .hero-section a.btn {
-    font-size: 1.1rem;
-    padding: 0.7rem 1.5rem;
-    font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  font-weight: 500;
+}
+
+/* Section Padding */
+section {
+  padding: 80px 0;
 }
 
 /* Theme Toggle Button */
 #toggleTheme {
-    border-radius: 50%;
-    padding: 6px 9px;
-}
-
-/* Add some spacing below the hero */
-section {
-    padding: 80px 0;
+  border-radius: 50%;
+  padding: 6px 9px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 767px) {
-    .hero-section h1 {
+  .hero-section h1 {
     font-size: 2rem;
-    }
-
-    .hero-section p {
-    font-size: 1rem;
-    }
-}
-  
-
-/* Custom Mobile Adjustments */
-@media (max-width: 768px) {
-    #team .card-body {
-      text-align: center;
-    }
-    .carousel-item p {
-      font-size: 1.2rem;
-    }
-    .carousel-item footer {
-      font-size: 0.9rem;
-    }
-    .btn-primary {
-      padding: 1rem 3rem; /* Adjust button size */
-    }
-    /* Center align icons in the footer on mobile */
-    footer a {
-      margin: 0 10px;
-    }
   }
-  
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #team .card-body {
+    text-align: center;
+  }
+
+  .carousel-item p {
+    font-size: 1.2rem;
+  }
+
+  .carousel-item footer {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 1rem 3rem;
+  }
+
+  footer a {
+    margin: 0 10px;
+  }
+}
+
 /* Light & Dark Mode Toggle */
 body.dark-mode {
-background-color: #121212;
-color: white;
+  background-color: #121212;
+  color: white;
 }
 
 body.dark-mode .navbar {
-background-color: #333;
+  background-color: #333;
 }
 
 body.dark-mode .bg-light {
-background-color: #1a1a1a;
+  background-color: #1a1a1a;
 }
 
 body.dark-mode .bg-dark {
-background-color: #000;
-}
- 
-#services {
-  background-color: #3498db;
+  background-color: #000;
 }
 
+/* Section Background Colors */
+#services,
 #team {
   background-color: #3498db;
 }
@@ -118,20 +134,24 @@ background-color: #000;
   border: 1px solid black;
 }
 
+/* Hero Background (if different from main hero-section) */
 #hero {
-  background: url('1.jpg') no-repeat center center/cover
+  background: url('1.jpg') no-repeat center center/cover;
 }
 
-.logo img{
+/* Logo Image */
+.logo img {
   width: 70px;
   margin-top: 5px;
   height: 60px;
 }
 
+/* Team Grid */
 .teamss {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  padding: 0 10px;
 }
 
 .teamss img {
@@ -141,23 +161,18 @@ background-color: #000;
   border-radius: 20px;
 }
 
+/* Mobile Adjustment */
 @media (max-width:768px) {
   .teamss {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.team{
+.team {
   color: #000;
   font-weight: bolder;
 }
 
-.team img{
+.team img {
   border-radius: 20px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+    }
